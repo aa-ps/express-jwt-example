@@ -1,0 +1,80 @@
+:root{
+    --background-color: #8697C4;
+    --border-color: #3D52A0;
+    --text-color: #1a2f7c;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
+form{
+    display: grid;
+    gap: 1em;
+    max-width: 20em;
+}
+
+.form-section{
+    gap: .5em;
+    display: grid;
+}
+
+
+
+button[type=submit]{
+    padding: .5em;
+    border: none;
+    color: white;
+    background-color: var(--border-color);
+
+}
+
+
+
+.navbar{
+    display: flex;
+    gap: 1em 0em;
+    font-size: 1.2em;
+    flex-wrap: wrap;
+    font-weight: bold;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 1em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar ul li{
+    color: white;
+    padding: .25em;
+    background-color: var(--border-color);
+    border-radius: 10%;
+}
+
+.container{
+    padding: 1em;
+}
+
+.navbar .active{
+    background-color: var(--text-color);
+}
