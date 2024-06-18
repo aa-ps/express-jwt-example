@@ -3,9 +3,11 @@ const onRegister = async (event) => {
 
   const registerForm = event.target;
   const registerData = new FormData(registerForm);
-
+  const errorMessage = document.getElementById("error");
   const username = registerData.get("username");
   const password = registerData.get("password");
+
+  errorMessage.innerText = "";
 
   const response = await fetch("/register", {
     method: "POST",
@@ -16,7 +18,9 @@ const onRegister = async (event) => {
     }),
   });
 
-  console.log(response);
+  const { error } = await response.json();
+
+  errorMessage.innerText = error;
 };
 
 (async () => {

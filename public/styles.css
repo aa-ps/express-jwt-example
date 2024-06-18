@@ -37,10 +37,8 @@ button[type=submit]{
     border: none;
     color: white;
     background-color: var(--border-color);
-
+    cursor: pointer;
 }
-
-
 
 .navbar{
     display: flex;
@@ -73,8 +71,17 @@ button[type=submit]{
 
 .container{
     padding: 1em;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .navbar .active{
     background-color: var(--text-color);
+}
+
+#error{
+    display: block;
+    color: red;
+    font-weight: bold;
+    font-size: x-small;
 }
